@@ -1,5 +1,5 @@
 # CCIE-EI-DC
-![image](https://github.com/0xPK/CCIE-EI-DC/blob/main/cisco%20live.jpg)
+![image](https://github.com/0xPK/CCIE-EI-DC/blob/main/Cisco%20Live.jpg)
 
 ## Cheat Sheet
 All resource for Cisco ENCOR 350-401 v1.1 documanes and CCIE EI v1.1 practical LAB
