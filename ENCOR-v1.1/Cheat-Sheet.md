@@ -1,8 +1,20 @@
 ## 2.0 Virtualization
 * 2.3 Describe network virtualization concepts
     * 2.3.a LISP
-
-
+      Endpoint Identifier (EID)
+      Routing Locator (RLOC)
+      Ingress Tunnel Router (ITR)
+      Egress Tunnel Router (ETR)
+      Map Server (MS)
+         ETR -> Map-Register -> MS
+         ETR <- Map-Notify <- MS
+      Map Resolver (MR)
+         ITR -> Map-Request -> MR
+         ITR <- Map-Reply <- MR
+      Proxy Ingress/Egress Tunnel Router (PxTR)
+         non-LISP -> PITR -> LISP
+         LISP -> PETR -> non-LISP
+      
 ## 3.0 Infrastructure
 * 3.1 Layer 2
 * 3.2 Layer 3
