@@ -1,3 +1,11 @@
+## 1.0 Architecture
+* 1.4 Explain the working principles of the Cisco SD-Access solution
+    * 1.4.a SD-Access control and data planes elements
+        * SD-Access
+            * Lisp  --> control plane
+            * VXLAN --> data plane
+    * 1.4.b Traditional campus interoperating with SD-Access
+---
 ## 2.0 Virtualization
 * 2.3 Describe network virtualization concepts
     * 2.3.a LISP
@@ -16,9 +24,13 @@
         * Proxy Ingress/Egress Tunnel Router (PxTR)
             * non-LISP -> PITR -> LISP
             * LISP -> PETR -> non-LISP
-###### #12 #111 #121 #622      
+    * 2.3.b VXLAN
+        * IaaS service providers use to extend a Layer 2 segment across a Layer 3 network
+###### #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #482 #495 #499 
+---
 ## 3.0 Infrastructure
 * 3.1 Layer 2
+    * 3.1.b Troubleshoot static and dynamic EtherChannels
 * 3.2 Layer 3
     * 3.2.a <font color=ntgreen>Compare</font> routing concepts of *EIGRP* and *OSPF* (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a>
 ```go
