@@ -25,7 +25,12 @@
             * non-LISP -> PITR -> LISP
             * LISP -> PETR -> non-LISP
     * 2.3.b VXLAN
+        * spine-leaf topology
         * IaaS service providers use to extend a Layer 2 segment across a Layer 3 network
+            * VXLAN Tunnel Endpoint (VTEP)
+                * 
+            * VNI (VXLAN Network Indentifier)
+            
 ###### #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #482 #495 #499 
 ---
 ## 3.0 Infrastructure
