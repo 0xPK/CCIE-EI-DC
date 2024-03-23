@@ -32,9 +32,7 @@
             * VNI (VXLAN Network Indentifier) / VNID
                 * Valid VNI values are 16 million
 
-![image](https://hackmd.io/_uploads/ryEbuu2C6.png)
-
-![image](https://hackmd.io/_uploads/B14-r_n06.png)
+![image](https://github.com/0xPK/CCIE-EI-DC/blob/main/ENCOR-v1.1/pics/vxlan%20frame.png)
 
 ###### #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
 ---
