@@ -1,10 +1,10 @@
 ## 1.0 Architecture
 * 1.4 Explain the working principles of the Cisco SD-Access solution
-    * 1.4.a SD-Access control and data planes elements
+    * ### 1.4.a SD-Access control and data planes elements
         * SD-Access
             * Lisp  --> control plane
             * VXLAN --> data plane
-    * 1.4.b Traditional campus interoperating with SD-Access
+    * ### 1.4.b Traditional campus interoperating with SD-Access
 ---
 ## 2.0 Virtualization
 * 2.3 Describe network virtualization concepts
@@ -38,9 +38,9 @@
 ---
 ## 3.0 Infrastructure
 * 3.1 Layer 2
-    * 3.1.b Troubleshoot static and dynamic EtherChannels
+    * ### 3.1.b Troubleshoot static and dynamic EtherChannels
 * 3.2 Layer 3
-    * 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a>
+    * ### 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a>
 ```go
   | OSPF(Shotest Path First)  | EIGRP(Ehance Interior Gateway Route)                |
   |:----------------------    | ---------------------------------                   |
