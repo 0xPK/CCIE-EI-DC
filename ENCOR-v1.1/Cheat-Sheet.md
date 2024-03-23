@@ -8,7 +8,7 @@
 ---
 ## 2.0 Virtualization
 * 2.3 Describe network virtualization concepts
-    * 2.3.a LISP
+    * ### 2.3.a LISP
         * Endpoint Identifier (EID)
             * Host IP Address
         * Routing Locator (RLOC)
@@ -24,20 +24,25 @@
         * Proxy Ingress/Egress Tunnel Router (PxTR)
             * non-LISP -> PITR -> LISP
             * LISP -> PETR -> non-LISP
-    * 2.3.b VXLAN
-        * spine-leaf topology
-        * IaaS service providers use to extend a Layer 2 segment across a Layer 3 network
+    ---
+    * ### 2.3.b VXLAN (UDP4789)
+        * Extend a Layer 2 segment across a Layer 3 network
             * VXLAN Tunnel Endpoint (VTEP)
-                * 
-            * VNI (VXLAN Network Indentifier)
-            
-###### #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #482 #495 #499 
+                * <font color=ntgreen>Encapsulate and De-encapsulate</font> VXLAN Ethernet frames 
+            * VNI (VXLAN Network Indentifier) / VNID
+                * Valid VNI values are 16 million
+
+![image](https://hackmd.io/_uploads/ryEbuu2C6.png)
+
+![image](https://hackmd.io/_uploads/B14-r_n06.png)
+
+###### #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
 ---
 ## 3.0 Infrastructure
 * 3.1 Layer 2
     * 3.1.b Troubleshoot static and dynamic EtherChannels
 * 3.2 Layer 3
-    * 3.2.a <font color=ntgreen>Compare</font> routing concepts of *EIGRP* and *OSPF* (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a>
+    * 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a>
 ```go
   | OSPF(Shotest Path First)  | EIGRP(Ehance Interior Gateway Route)                |
   |:----------------------    | ---------------------------------                   |
