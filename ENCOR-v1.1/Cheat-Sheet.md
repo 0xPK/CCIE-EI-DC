@@ -74,6 +74,19 @@
     * 3.4.c Configure first hop redundancy protocols, such as HSRP, VRRP
     * 3.4.d Describe multicast protocols, such as RPF check, PIM and IGMP v2/v3
 ---
+## <font color=ntgreen>4.0 Network Assurance</font>
+* ### 4.5 Describe Cisco DNA Center workflows to apply network configuration, monitoring, and management
+---
+## <font color=ntgreen>6.0 Automation</font>
+* ### 6.4 Describe APIs for Cisco DNA Center and vManage
+   * Cisco DNA Center API (network automation)
+      * Northbound
+        * RESTful API
+        * controller -> DNA management software
+    * Southbound
+        * controller(push config) -> devices(routers, switches)
+#77 #91
+---
 ## Mapping Table
 * 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
 * 3.2.a= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
