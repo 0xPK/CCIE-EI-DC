@@ -1,14 +1,14 @@
-## 1.0 Architecture
-* 1.4 Explain the working principles of the Cisco SD-Access solution
-    * ### 1.4.a SD-Access control and data planes elements
+## <font color=ntgreen>1.0 Architecture</font>
+* ### 1.4 Explain the working principles of the Cisco SD-Access solution
+    * 1.4.a SD-Access control and data planes elements
         * SD-Access
             * Lisp  --> control plane
             * VXLAN --> data plane
-    * ### 1.4.b Traditional campus interoperating with SD-Access
+    * 1.4.b Traditional campus interoperating with SD-Access
 ---
-## 2.0 Virtualization
-* 2.3 Describe network virtualization concepts
-    * ### 2.3.a LISP
+## <font color=ntgreen>2.0 Virtualization</font>
+* ### 2.3 Describe network virtualization concepts
+    * 2.3.a LISP
         * Endpoint Identifier (EID)
             * Host IP Address
         * Routing Locator (RLOC)
@@ -25,7 +25,7 @@
             * non-LISP -> PITR -> LISP
             * LISP -> PETR -> non-LISP
     ---
-    * ### 2.3.b VXLAN (UDP4789)
+    * 2.3.b VXLAN (UDP4789)
         * Extend a Layer 2 segment across a Layer 3 network
             * VXLAN Tunnel Endpoint (VTEP)
                 * <font color=ntgreen>Encapsulate and De-encapsulate</font> VXLAN Ethernet frames 
@@ -34,13 +34,12 @@
 
 ![image](https://github.com/0xPK/CCIE-EI-DC/blob/main/ENCOR-v1.1/pics/vxlan%20frame.png)
 
-###### #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
 ---
-## 3.0 Infrastructure
-* 3.1 Layer 2
-    * ### 3.1.b Troubleshoot static and dynamic EtherChannels
-* 3.2 Layer 3
-    * ### 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a>
+## <font color=ntgreen>3.0 Infrastructure</font>
+* ### 3.1 Layer 2
+    * 3.1.b Troubleshoot static and dynamic EtherChannels
+* ### 3.2 Layer 3
+    * 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a> 
 ```go
   | OSPF(Shotest Path First)  | EIGRP(Ehance Interior Gateway Route)                |
   |:----------------------    | ---------------------------------                   |
@@ -65,6 +64,17 @@
   | ----------------          | ---------------------------------                   |
   | *Equal-cost Load Balance  | Variance(Unequal-costLoad Balance)                  |
 ```
-
-###### #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
-
+* ### 3.4 IP Services
+    * 3.4.a Interpret network time protocol configurations such as NTP and PTP
+    * 3.4.b Configure NAT/PAT 
+        * NAT
+            * DNAT/SNAT
+        * PAT
+            * =<font color=ntgreen>NAT Overload</font>          
+    * 3.4.c Configure first hop redundancy protocols, such as HSRP, VRRP
+    * 3.4.d Describe multicast protocols, such as RPF check, PIM and IGMP v2/v3
+---
+## Mapping Table
+* 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
+* 3.2.a= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
+* 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
