@@ -81,11 +81,13 @@
 * ### 6.4 Describe APIs for Cisco DNA Center and vManage
    * Cisco DNA Center API (network automation)
       * Northbound
-        * RESTful API
-        * controller -> DNA management software
-    * Southbound
-        * controller(push config) -> devices(routers, switches)
-#77 #91
+         * Intent APIs(Cisco's API name) to simplify API usage
+         * based on RESTful API
+         * controller -> DNA management software
+      * Southbound
+         * Multivendor Support APIs/SDK
+         * controller(push config) -> devices(routers, switches)
+* #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
 ---
 ## Mapping Table
 * 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
