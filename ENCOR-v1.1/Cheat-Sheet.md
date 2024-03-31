@@ -67,10 +67,19 @@
 * ### 3.4 IP Services
     * 3.4.a Interpret network time protocol configurations such as NTP and PTP
     * 3.4.b Configure NAT/PAT 
-        * NAT
-            * DNAT/SNAT
+        * Static NAT
+            * (config)# ip nat inside source static [Inside local add] [Indise Golobal add]
+            * extendable
+            * https://networklessons.com/uncategorized/nat-extendable-on-cisco-ios
+        * Dynamic NAT
+            * (config)# ip nat inside source list [number] pool [pool-name]
+            * (config)# access-list [number] permit [Inside local add] [wildmask]
+            * (config)# ip nat pool [pool-name] [add_start] [add_end] [netmask]
         * PAT
-            * =<font color=ntgreen>NAT Overload</font>          
+            * =<font color=ntgreen>NAT Overload</font>
+            * (config)# ip nat inside source list [number] pool [pool-name] overload
+            * (config)# access-list [number] permit [Inside local add] [wildmask]
+            * (config)# ip nat pool [pool-name] [add_start] [add_end] [netmask]
     * 3.4.c Configure first hop redundancy protocols, such as HSRP, VRRP
     * 3.4.d Describe multicast protocols, such as RPF check, PIM and IGMP v2/v3
 ---
