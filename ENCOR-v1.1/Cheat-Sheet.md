@@ -39,7 +39,9 @@
 * ### 3.1 Layer 2
     * 3.1.b Troubleshoot static and dynamic EtherChannels
     * 3.1.c Configure and verify common Spanning Tree Protocols (RSTP, MST) and Spanning Tree enhancements such as root guard and BPDU guard
-       * PSTP+
+       * PVST+
+       * MST
+       * root guard
        * BPDU guard
 * ### 3.2 Layer 3
     * 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a> 
