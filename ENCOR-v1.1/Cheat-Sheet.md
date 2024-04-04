@@ -38,6 +38,9 @@
 ## <font color=ntgreen>3.0 Infrastructure</font>
 * ### 3.1 Layer 2
     * 3.1.b Troubleshoot static and dynamic EtherChannels
+    * 3.1.c Configure and verify common Spanning Tree Protocols (RSTP, MST) and Spanning Tree enhancements such as root guard and BPDU guard
+       * PSTP+
+       * BPDU guard
 * ### 3.2 Layer 3
     * 3.2.a <font color=ntgreen>Compare</font> routing concepts of EIGRP and OSPF (advanced distance vector vs. link state, load balancing, path selection, path operations, metrics, and area types)<a name="vs."></a> 
 ```go
@@ -98,7 +101,10 @@
          * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
-* 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499 
+* 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499
+* 3.1.c
+   * PVST+= #487
+   * BPDU guard= #147 
 * 3.2.a= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
 * 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
 * 6.4 = #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
