@@ -69,6 +69,13 @@
   | ----------------          | ---------------------------------                   |
   | *Equal-cost Load Balance  | Variance(Unequal-costLoad Balance)                  |
 ```
+
+* ### 3.3 Wireless
+    * 3.3.c Describe access point discovery and join process (discovery algorithms, WLC selection process)
+      * CAPWAP
+         *  Discover WLC: 1.broadcasts or 2.send UDP-5246 to WLC IP
+         *  Get WLC Address: DHCP option 43
+         *  Domain: CISCO-CAPWAP-CONTROLLER.localdomain
 * ### 3.4 IP Services
     * 3.4.a Interpret network time protocol configurations such as NTP and PTP
     * 3.4.b Configure NAT/PAT 
@@ -110,5 +117,6 @@
    * portfast= #463
    * BPDU guard= #270 #147 #175 #279 #386 #487
 * 3.2.a= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
+* 3.3.c= #6 #71 #78 #129 #216 #268 #302 #464
 * 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
 * 6.4 = #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
