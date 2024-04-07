@@ -7,6 +7,16 @@
     * 1.4.b Traditional campus interoperating with SD-Access
 ---
 ## <font color=ntgreen>2.0 Virtualization</font>
+* ### 2.2 Configure and verify data path virtualization technologies
+    * 2.2.b GRE and IPsec tunneling
+       * GRE (Generic Routing Encapsulation)
+          * encapsulation and de-encapsulation packet between router
+          * GRE tunnels support IPv4 or IPv6
+          * bandwidth [1-10000000]: QoS
+          * keepalive [seconds[retries]]: default 10 seconds, 3 retry
+          * IP Header=(20 Bytes), TCP/UDP Header(20 bytes), GRE Header(24bytes)
+          * TCP: Maximum Segment Size (MSS): 1500-20-20-24=1436 bytes
+          * IP: Maximum Transmission Unit (MTU) : 1500 bytes
 * ### 2.3 Describe network virtualization concepts
     * 2.3.a LISP
         * Endpoint Identifier (EID)
@@ -110,6 +120,8 @@
          * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
+* 2.2.b
+   * GRE= #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
 * 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499
 * 3.1.c
    * MST= #180 #208 
