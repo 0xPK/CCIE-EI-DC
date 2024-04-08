@@ -92,6 +92,8 @@
         * Static NAT
             * (config)# ip nat inside source static [Inside local add] [Indise Golobal add]
             * extendable
+            * no-alias
+               *    
             * https://networklessons.com/uncategorized/nat-extendable-on-cisco-ios
         * Dynamic NAT
             * (config)# ip nat inside source list [number] pool [pool-name]
@@ -124,7 +126,6 @@
    * GRE= #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
 * 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499
 * 3.1.c
-   * MST= #180 #208 
    * PVST+= #408 #413
    * portfast= #463
    * BPDU guard= #270 #147 #175 #279 #386 #487
