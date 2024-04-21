@@ -127,6 +127,27 @@
 # <font color=ntgreen>4.0 Network Assurance</font>
 ### 4.5 Describe Cisco DNA Center workflows to apply network configuration, monitoring, and management
 ### 4.3 Configure SPAN/RSPAN/ERSPAN
+* Switched Port Analyzer (SPAN) => Local
+   * Catalyst(config)#monitor session 1 source interface f0/1 - 2
+   * Catalyst(config)#monitor session 1 destination interface f0/3
+* Remote SPAN (RSPAN) => send SPAN traffic to a VLAN
+   * SW1(config)# vlan 999
+   * SW1(config-vlan)# remote-span
+   * SW1(config)# monitor session 1 source interface FastEthernet 0/10
+   * SW1(config)# monitor session 1 destination remote vlan 999
+* Encapsulated Remote SPAN (ERSPAN) => send SPAN traffic to a IP
+   * erspan-id must be equal.
+   * sender's dst IP equal to reciver's src IP.
+ 
+   * R1(config-mon-erspan-src)#destination
+   * R1(config-mon-erspan-src-dst)#erspan-id 100
+   * R1(config-mon-erspan-src-dst)#ip address 172.16.2.200
+   * R1(config-mon-erspan-src-dst)#origin ip address 172.16.12.1
+
+   * R2(config-mon-erspan-dst)#source
+   * R2(config-mon-erspan-dst-src)#erspan-id 100
+   * R2(config-mon-erspan-dst-src)#ip address 172.16.2.200
+
 ---
 # <font color=ntgreen>6.0 Automation</font>
 ### 6.4 Describe APIs for Cisco DNA Center and vManage
@@ -154,5 +175,5 @@
 * 3.2.c= #490=634 #536 #548 #580 #582 #588 #613 #617 
 * 3.3.c= #6 #71 #78 #129 #216 #268 #302 #464
 * 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
-* 4.3 = #80 #97 #130
+* 4.3 = #80 #97 #130 #160 #168 #211 #334 #417 #530 #540
 * 6.4 = #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
