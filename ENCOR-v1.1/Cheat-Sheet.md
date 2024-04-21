@@ -1,4 +1,9 @@
 # <font color=ntgreen>1.0 Architecture</font>
+### 1.4 Explain the working principles of the Cisco SD-WAN solution
+* 1.3.a SD-WAN control and data planes elements
+    * redistributed into OMP
+        * OSPF/EIGRP
+* 1.3.b Benefits and limitations of SD-WAN solutions
 ### 1.4 Explain the working principles of the Cisco SD-Access solution
 * 1.4.a SD-Access control and data planes elements
     * SD-Access
@@ -80,7 +85,17 @@
   | *Equal-cost Load Balance  | Variance(Unequal-costLoad Balance)                  |
 ```
 * 3.2.b Configure simple OSPFv2/v3 environments, including multiple normal areas, summarization, and filtering (neighbor adjacency, point-to-point, and broadcast network types, and passive-interface)
-    * 123
+    * Config
+        * Enable OSPF on network interfaces matching a specified network range for a specific OSPF area
+            * network ip-address wildcard-mask area area-id
+        * Enable OSPF on an explicit specific network interface for a specific OSPF area 
+            * ip ospf process-id area area-id
+    * Point-to-point
+        * Only support 2 device to communication use ospf
+        * Statically configure an interface as a point to-point OSPF network type ip ospf network point-to-point
+    * passive-interface
+        * Configure a specific interface as passive passive interface-id 
+        * Configure all interfaces as passive passive interface default
 * 3.2.c Configure and verify eBGP between directly connected neighbors (best path selection algorithm and neighbor relationships)
 ### 3.3 Wireless
 * 3.3.c Describe access point discovery and join process (discovery algorithms, WLC selection process)
@@ -132,7 +147,9 @@
    * portfast= #463
    * BPDU guard= #270 #147 #175 #279 #386 #487
 * 3.2.a= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
-* 3.2.b= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
+* 3.2.b= <font color=ntgreen>#294</font> #494 <font color=red>#548</font> <font color=red>#591</font> #597
+    * Point-to-point #621
+    * Passive-int #314 #631 #642
 * 3.2.c= #490=634 #536 #548 #580 #582 #588 #613 #617 
 * 3.3.c= #6 #71 #78 #129 #216 #268 #302 #464
 * 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
