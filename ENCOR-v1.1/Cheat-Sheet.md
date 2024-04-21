@@ -126,6 +126,7 @@
 ---
 # <font color=ntgreen>4.0 Network Assurance</font>
 ### 4.5 Describe Cisco DNA Center workflows to apply network configuration, monitoring, and management
+### 4.3 Configure SPAN/RSPAN/ERSPAN
 ---
 # <font color=ntgreen>6.0 Automation</font>
 ### 6.4 Describe APIs for Cisco DNA Center and vManage
@@ -153,4 +154,5 @@
 * 3.2.c= #490=634 #536 #548 #580 #582 #588 #613 #617 
 * 3.3.c= #6 #71 #78 #129 #216 #268 #302 #464
 * 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
+* 4.3 = #80 #97 #130
 * 6.4 = #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
