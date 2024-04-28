@@ -9,6 +9,43 @@
     * SD-Access
         * Lisp  --> control plane
         * VXLAN --> data plane
+		* Management Layer
+			* Cisco DNA Center GUI
+		* Controller Layer
+			* Cisco Network Control Platform (NCP): Control SW, Router
+			* Cisco Network Data Platform (NDP):NetFlow,SPAN
+			* Cisco Identity Services Engine (ISE)
+		* Network Layer
+			* Underlay: physical
+			* Overlay: virtual(tunneled)
+				* Control plane= LISP
+				* Data plane= VXLAN
+				* Policy plane= Cisco TrustSec				
+			* WLC: outside of the fabric
+			* Wireless client: Underlay
+			* Access points : Overlay
+		* Physical Layer
+			* Cisco switches, routers, wireless
+			
+		* Node classification
+			* Control plane node
+				* LISP map server/resolver (MS/MR)
+				* SGT mapping
+			* Fabric border node
+				* LISP proxy tunnel routers (PxTRs)
+			* Fabric edge node
+				* conect endpoint
+				* LISP tunnel router (xTR)
+				* assign SGT
+				* register endpoint EID
+			* Fabric WLAN controller (WLC)
+				* control plane: CAPWAP
+				* data plane: VXLAN
+			* Intermediate nodes
+    * other
+		* SD-Access Roaming: inter-xTR
+		* SD-Access MTU bytes: 1500 + 50(vxlan) => minimum, 9100 =>recommand
+		* edge node <-> extended node: 802.1Q Trunk port
 * 1.4.b Traditional campus interoperating with SD-Access
 ---
 # <font color=ntgreen>2.0 Virtualization</font>
@@ -161,6 +198,7 @@
         * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
+* 1.4.a =#82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #543 #608 #648 #1 #51
 * 2.2.b
    * GRE= #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
 * 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499
