@@ -25,8 +25,7 @@
 			* Wireless client: Underlay
 			* Access points : Overlay
 		* Physical Layer
-			* Cisco switches, routers, wireless
-			
+			* Cisco switches, routers, wireless			
 		* Node classification
 			* Control plane node
 				* LISP map server/resolver (MS/MR)
@@ -42,7 +41,7 @@
 				* control plane: CAPWAP
 				* data plane: VXLAN
 			* Intermediate nodes
-    * other
+    * Other
 		* SD-Access Roaming: inter-xTR
 		* SD-Access MTU bytes: 1500 + 50(vxlan) => minimum, 9100 =>recommand
 		* edge node <-> extended node: 802.1Q Trunk port
@@ -175,12 +174,12 @@
 * Encapsulated Remote SPAN (ERSPAN) => send SPAN traffic to a IP
    * erspan-id must be equal.
    * sender's dst IP equal to reciver's src IP.
- 
+--- 
    * R1(config-mon-erspan-src)#destination
    * R1(config-mon-erspan-src-dst)#erspan-id 100
    * R1(config-mon-erspan-src-dst)#ip address 172.16.2.200
    * R1(config-mon-erspan-src-dst)#origin ip address 172.16.12.1
-
+---
    * R2(config-mon-erspan-dst)#source
    * R2(config-mon-erspan-dst-src)#erspan-id 100
    * R2(config-mon-erspan-dst-src)#ip address 172.16.2.200
