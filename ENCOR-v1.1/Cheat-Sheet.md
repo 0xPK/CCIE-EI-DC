@@ -97,14 +97,14 @@
 		* Auto
 		* Desirable
 		* X: Auto <-> Auto 
-		```#non silent keyword requires a port to receive PAgP packets before
+		* ```#non silent keyword requires a port to receive PAgP packets before
 		channel group etherchannel id mode auto | desirable } [non-silent]```
 		
 	* LACP(Open industry standard)
 		* Passive
 		* Active
 		* X: Passive <-> Passive 
-		```channel group etherchannel id mode active | passive```
+		* ```channel group etherchannel id mode active | passive```
 		* lacp rate fast (health check 30's *3 => 1's * 3)
 		* lacp max bundle [max links]: max links that are forwarding traffic, remaining links remain in hot-standby mode.
 	* show status
