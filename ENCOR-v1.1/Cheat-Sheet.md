@@ -97,8 +97,8 @@
 		* Auto
 		* Desirable
 		* X: Auto <-> Auto 
-		* ```#non silent keyword requires a port to receive PAgP packets before
-		channel group etherchannel id mode auto | desirable } [non-silent]```
+		* non silent keyword requires a port to receive PAgP packets before
+		* `channel group etherchannel id mode auto | desirable } [non-silent]`
 		
 	* LACP(Open industry standard)
 		* Passive
