@@ -46,6 +46,18 @@
 		* SD-Access MTU bytes: 1500 + 50(vxlan) => minimum, 9100 =>recommand
 		* edge node <-> extended node: 802.1Q Trunk port
 * 1.4.b Traditional campus interoperating with SD-Access
+### 1.5 Interpret wired and wireless QoS configurations
+* 1.5.a QoS components
+    * Marking in packet
+        * Layer3: ToS/DiffServ -> Differentiated Services Code Point(DSCP)
+        * Layer2.5: MPLS Experimental(EXP) bits
+        * Layer2: CoS
+
+![QoS2](https://hackmd.io/_uploads/SkYb54BGA.png)
+
+* 1.5.b QoS policy
+
+
 ---
 # <font color=ntgreen>2.0 Virtualization</font>
 ### 2.2 Configure and verify data path virtualization technologies
@@ -223,6 +235,7 @@
 ---
 ## Mapping Table
 * 1.4.a: #1 #51 #82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #543 #608 #648
+* 1.5.a: #596 #643
 * 2.2.b
    * GRE: #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
 * 2.3.b: #75 #92 #145 #200 #324 #365 #418 #495 #499
