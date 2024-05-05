@@ -120,7 +120,7 @@
   | ----------------          | ---------------------------------                   |
   | *Equal-cost Load Balance  | Variance(Unequal-costLoad Balance)                  |
 ```
-* 3.2.b Configure simple OSPFv2/v3 environments, including multiple normal areas, summarization, and filtering (neighbor adjacency, point-to-point, and broadcast network types, and passive-interface)
+* 3.2.b Configure simple <span style="font-size:20px; color:red">OSPFv2/v3</span> environments, including multiple normal areas, summarization, and filtering (neighbor adjacency, point-to-point, and broadcast network types, and passive-interface)
     * Config
         * Enable OSPF on network interfaces matching a specified network range for a specific OSPF area
             * network ip-address wildcard-mask area area-id
@@ -132,7 +132,7 @@
     * passive-interface
         * Configure a specific interface as passive passive interface-id 
         * Configure all interfaces as passive passive interface default
-* 3.2.c Configure and verify eBGP between directly connected neighbors (best path selection algorithm and neighbor relationships)
+* 3.2.c Configure and verify <span style="font-size:20px; color:red">eBGP</span> between directly connected neighbors (best path selection algorithm and neighbor relationships)
 ### 3.3 Wireless
 * 3.3.c Describe access point discovery and join process (discovery algorithms, WLC selection process)
     * CAPWAP
@@ -190,14 +190,25 @@
 * 5.1.b Authentication and authorization using AAA
     * aaa authentication default group radius 
         * only aaa auth
-    * aaa authentication login default group radius [local/none]
+    * aaa authentication login default group radius [local/none] 
+    * <--> aaa authentication login default local group [radius/tacacs+]
         * local: first radius/tacacs+, next local
-            * chg -> aaa authentication login default local group [radius/tacacs+]
         * none: when radius auth fail, no auth any command
     * aaa authentication login default group ISE-servers local enable
         * when no usernames are defined in the configuration then the <font color=ntgreen>enable password</font> must be the last resort to log in
     * aaa authorization exec default group radius if-authenticated
         * when the user has successfully authenticated 
+### 5.5 Describe the components of network security design
+* 5.5.a Threat defense
+* 5.5.b Endpoint security
+* 5.5.c Next-generation firewall
+* 5.5.d TrustSec and MACsec
+* 5.5.e Network access control with 802.1X, MAB, and WebAuth
+    * EAP
+        * Out(Tunnel): 
+        * In:
+    * EAP-FAST
+        * Cisco only 
 ---
 # <font color=ntgreen>6.0 Automation</font>
 ### 6.4 Describe APIs for Cisco DNA Center and vManage
@@ -211,21 +222,23 @@
         * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
-* 1.4.a =#82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #543 #608 #648 #1 #51
+* 1.4.a: #1 #51 #82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #543 #608 #648
 * 2.2.b
-   * GRE= #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
-* 2.3.b= #75 #92 #145 #200 #324 #365 #418 #495 #499
+   * GRE: #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
+* 2.3.b: #75 #92 #145 #200 #324 #365 #418 #495 #499
 * 3.1.c
-   * PVST+= #408 #413
-   * portfast= #463
-   * BPDU guard= #270 #147 #175 #279 #386 #487
-* 3.2.a= #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
-* 3.2.b= <font color=ntgreen>#294</font> #494 <font color=red>#548</font> <font color=red>#591</font> #597
-    * Point-to-point #621
-    * Passive-int #314 #631 #642
-* 3.2.c= #490=634 #536 #548 #580 #582 #588 #613 #617 
-* 3.3.c= #6 #71 #78 #129 #216 #268 #302 #464
-* 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
-* 4.3 = #80 #97 #130 #160 #168 #211 #334 #417 #530 #540
-* 5.1.b = #139 #155 #341 <u> #426 #442 </u> #594 #612 #629 #641 #700
-* 6.4 = #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
+   * PVST+: #408 #413
+   * portfast: #463
+   * BPDU guard: #270 #147 #175 #279 #386 #487
+* 3.2.a: #89 #202 #233 #375 #480 #481 #512 #515 #604 #647
+* 3.2.b: <font color=ntgreen>#294</font> #494 <font color=red>#548</font> <font color=red>#591</font> #597
+    * Point-to-point: #621
+    * Passive-int: #314 #631 #642
+* 3.2.c(BGP): #490=634 <font color=red>#502</font> #536 #548 #580 #582 #588 #613 #617 
+* 3.3.c: #6 #71 #78 #129 #216 #268 #302 #464
+* 3.4.b: #66 #132 #186 #223 #370 #384 #484 #489 #605
+* 4.3: #80 #97 #130 #160 #168 #211 #334 #417 #530 #540
+* 5.1.b(AAA): #139 #155 #341 #426 #442 <font color=red>#501</font> #594 #612 #629 #641 #700
+* 5.5.e
+    * EAP: #76 #504 #747
+* 6.4: #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
