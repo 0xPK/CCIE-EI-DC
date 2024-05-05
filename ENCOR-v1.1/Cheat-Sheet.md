@@ -89,29 +89,6 @@
 # <font color=ntgreen>3.0 Infrastructure</font>
 ### 3.1 Layer 2
 * 3.1.b Troubleshoot static and dynamic EtherChannels
-	* STP operates on a logical link and not on a physical link.
-	* Static EtherChannel
-		* no health check
-		```channel group etherchannel id mode on```
-	* PAgP(Cisco)
-		* Auto
-		* Desirable
-		* X: Auto <-> Auto 
-		* non silent keyword requires a port to receive PAgP packets before
-		* `channel group etherchannel id mode auto | desirable } [non-silent]`
-		
-	* LACP(Open industry standard)
-		* Passive
-		* Active
-		* X: Passive <-> Passive 
-		* ```channel group etherchannel id mode active | passive```
-		* lacp rate fast (health check 30's *3 => 1's * 3)
-		* lacp max bundle [max links]: max links that are forwarding traffic, remaining links remain in hot-standby mode.
-	* show status
-		* show etherchannel summary
-		* show etherchannel port
-		* show pagp neighbor
-		* show lacp neighbor
 * 3.1.c Configure and verify common Spanning Tree Protocols (RSTP, MST) and Spanning Tree enhancements such as root guard and BPDU guard
      * PVST+
      * MST
@@ -184,7 +161,6 @@
 * 3.4.d Describe multicast protocols, such as RPF check, PIM and IGMP v2/v3
 ---
 # <font color=ntgreen>4.0 Network Assurance</font>
-### 4.5 Describe Cisco DNA Center workflows to apply network configuration, monitoring, and management
 ### 4.3 Configure SPAN/RSPAN/ERSPAN
 * Switched Port Analyzer (SPAN) => Local
    * Catalyst(config)#monitor session 1 source interface f0/1 - 2
@@ -206,7 +182,22 @@
    * R2(config-mon-erspan-dst)#source
    * R2(config-mon-erspan-dst-src)#erspan-id 100
    * R2(config-mon-erspan-dst-src)#ip address 172.16.2.200
-
+---
+### 4.5 Describe Cisco DNA Center workflows to apply network configuration, monitoring, and management
+# <font color=ntgreen>5.0 Security</font>
+### 5.1 Configure and verify device access control
+* 5.1.a Lines and local user authentication
+* 5.1.b Authentication and authorization using AAA
+    * aaa authentication default group radius 
+        * only aaa auth
+    * aaa authentication login default group radius [local/none]
+        * local: first radius/tacacs+, next local
+            * chg -> aaa authentication login default local group [radius/tacacs+]
+        * none: when radius auth fail, no auth any command
+    * aaa authentication login default group ISE-servers local enable
+        * when no usernames are defined in the configuration then the <font color=ntgreen>enable password</font> must be the last resort to log in
+    * aaa authorization exec default group radius if-authenticated
+        * when the user has successfully authenticated 
 ---
 # <font color=ntgreen>6.0 Automation</font>
 ### 6.4 Describe APIs for Cisco DNA Center and vManage
@@ -220,10 +211,10 @@
         * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
-* 1.4.a =#82 #88 #92 #120 #131 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #543 #608 #648 #1 #51
+* 1.4.a =#82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #543 #608 #648 #1 #51
 * 2.2.b
    * GRE= #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
-* 2.3.b= #75 #92 #145 #200 #237 #278 #324 #365 #418 #458 #495 #499
+* 2.3.b= #75 #92 #145 #200 #324 #365 #418 #495 #499
 * 3.1.c
    * PVST+= #408 #413
    * portfast= #463
@@ -235,5 +226,6 @@
 * 3.2.c= #490=634 #536 #548 #580 #582 #588 #613 #617 
 * 3.3.c= #6 #71 #78 #129 #216 #268 #302 #464
 * 3.4.b= #66 #132 #186 #223 #370 #384 #484 #489 #605
-* 4.3 = #80 #97 #130 #160 #168 #211 #334 #417 #530 #540 #196
+* 4.3 = #80 #97 #130 #160 #168 #211 #334 #417 #530 #540
+* 5.1.b = #139 #155 #341 <u> #426 #442 </u> #594 #612 #629 #641 #700
 * 6.4 = #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
