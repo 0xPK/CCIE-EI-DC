@@ -101,6 +101,33 @@
 # <font color=ntgreen>3.0 Infrastructure</font>
 ### 3.1 Layer 2
 * 3.1.b Troubleshoot static and dynamic EtherChannels
+* EtherChannel Bundle
+	* STP operates on a logical link and not on a physical link.
+	* Static EtherChannel
+		* no health check
+		* ```channel group etherchannel id mode on```
+	* PAgP(Cisco)
+		* Auto
+		* Desirable
+		* X: Auto <-> Auto 
+		* non silent keyword requires a port to receive PAgP packets before
+		* ```channel group etherchannel id mode auto | desirable } [non-silent]```
+		
+	* LACP(Open industry standard)
+		* Passive
+		* Active
+		* X: Passive <-> Passive 
+		* ```channel group etherchannel id mode active | passive```
+		* lacp rate fast (health check 30's *3 => 1's * 3)
+		* lacp max bundle [max links]: max links that are forwarding traffic, remaining links remain in hot-standby mode.
+	* show status
+		* show etherchannel summary
+		* show etherchannel port
+		* show pagp neighbor
+		* show lacp neighbor	
+	
+	#147 #175 = 1.關閉其中一個port再設定EtherChannel，再啟用port，讓bpdu封包走在邏輯介面(EtherChannel)上。2.關閉bpdu
+
 * 3.1.c Configure and verify common Spanning Tree Protocols (RSTP, MST) and Spanning Tree enhancements such as root guard and BPDU guard
      * PVST+
      * MST
@@ -239,6 +266,7 @@
 * 2.2.b
    * GRE: #79 #86 #179 #238 #264 #273 #286 #287 #309 #317
 * 2.3.b: #75 #92 #145 #200 #324 #365 #418 #495 #499
+* 3.1.b: #17 #37 #83 #110 #147 #175 #479 #626 #224 #318 #358 #447
 * 3.1.c
    * PVST+: #408 #413
    * portfast: #463
