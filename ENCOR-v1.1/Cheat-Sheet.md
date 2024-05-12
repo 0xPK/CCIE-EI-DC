@@ -239,8 +239,12 @@
         * when the user has successfully authenticated 
 ### 5.5 Describe the components of network security design
 * 5.5.a Threat defense
+    * Solution: Secure Network Analytics <-> Stealwatch
+        * collects <font color=red>telemetry</font> from every part of the network and applies advanced security analytics to the data
+            * Telemetry: real-time flows of network traffic, user activities, device statuses, and other information
 * 5.5.b Endpoint security
 * 5.5.c Next-generation firewall
+    * Secure Firewall <-> Firepowre <-> ASA 
 * 5.5.d TrustSec and MACsec
 * 5.5.e Network access control with 802.1X, MAB, and WebAuth
     * EAP
@@ -280,6 +284,7 @@
 * 3.4.b: #66 #132 #186 #223 #370 #384 #484 #489 #605
 * 4.3: #80 #97 #130 #160 #168 #211 #334 #417 #530 #540
 * 5.1.b(AAA): #139 #155 #341 #426 #442 <font color=red>#501</font> #594 #612 #629 #641 #700
+* 5.5.a(TD): #133 #192 #214 #337 #571 #576 #652
 * 5.5.e
     * EAP: #76 #504 #747
 * 6.4: #77 #91 #127 #144 #183 #225 #307 #379 #406 #436 #471 #468 #513 #518 #569
