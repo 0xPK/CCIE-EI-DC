@@ -1,5 +1,5 @@
 # <font color=ntgreen>1.0 Architecture</font>
-### 1.4 Explain the working principles of the Cisco SD-WAN solution
+### 1.3 Explain the working principles of the Cisco SD-WAN solution
 * 1.3.a SD-WAN control and data planes elements
     * redistributed into OMP
         * OSPF/EIGRP
