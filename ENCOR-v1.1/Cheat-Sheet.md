@@ -112,7 +112,6 @@
 		* X: Auto <-> Auto 
 		* non silent keyword requires a port to receive PAgP packets before
 		* ```channel group etherchannel id mode auto | desirable } [non-silent]```
-		
 	* LACP(Open industry standard)
 		* Passive
 		* Active
@@ -125,9 +124,7 @@
 		* show etherchannel port
 		* show pagp neighbor
 		* show lacp neighbor	
-	
 	#147 #175 = 1.關閉其中一個port再設定EtherChannel，再啟用port，讓bpdu封包走在邏輯介面(EtherChannel)上。2.關閉bpdu
-
 * 3.1.c Configure and verify common Spanning Tree Protocols (RSTP, MST) and Spanning Tree enhancements such as root guard and BPDU guard
      * PVST+
      * MST
