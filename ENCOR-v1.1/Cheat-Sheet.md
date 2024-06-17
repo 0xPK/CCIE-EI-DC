@@ -4,6 +4,31 @@
     * redistributed into OMP
         * OSPF/EIGRP
 * 1.3.b Benefits and limitations of SD-WAN solutions
+	* vManage: 
+		* GUI management
+		* software upgrades
+	* vSmart Controller: 
+		* control plane
+		* distribute policies
+		* authenticate SD-WAN router
+		* DTLS tunnel to SD-WAN router =>  Overlay Management Protocol (OMP) 
+	* Cisco SD-WAN Routers (vEdge and cEdge)
+		* vEdge: The original Viptela platforms running Viptela software.
+		* cEdge: Viptela software integrated with Cisco IOS-XE. 
+	* vBond Orchestrator: 
+		* authenticates: vSmart Controller, SD-WAN Routers
+		* onboarding of SDWAN routers
+	
+	* control plane connection -> DTLS tunnel ->  vSmart controller
+	* NAT traversal: behind NAT devices
+	* load balancing: SD-WAN routers across the vSmart controllers when routers come online.
+	
+	* vAnalytics: assurance,  analytics
+	* other:
+		* Cloud OnRamp : WAN Cloud(SD-WAN router, sending small HTTP probes, find best path)
+		* monitor protocal: Bi-directional Forwarding Detection (BFD) 
+		* segmentation: VPN
+		* tunnel= DTLS or TLS
 ### 1.4 Explain the working principles of the Cisco SD-Access solution
 * 1.4.a SD-Access control and data planes elements
     * SD-Access
@@ -262,6 +287,7 @@
         * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
+* 1.3: #87 #123 #140 #152 #229 #234 #297 #328 #335 #382 #393
 * 1.4.a: #1 #51 #82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #534 #608 #648
 * 1.5.a: #596 #643
 * 2.2.b
