@@ -194,6 +194,20 @@
         * Configure a specific interface as passive passive interface-id 
         * Configure all interfaces as passive passive interface default
 * 3.2.c Configure and verify <span style="font-size:20px; color:red">eBGP</span> between directly connected neighbors (best path selection algorithm and neighbor relationships)
+	* BGP Packet Types
+		* 1 OPEN:		Sets up and establishes BGP adjacency
+		* 2 UPDATE:		Advertises, updates, or withdraws routes
+		* 3 NOTIFICATION:	Indicates an error condition to a BGP neighbor
+		* 4 KEEPALIVE:		Ensures that BGP neighbors are still alive
+  	* BGP Neighbor States:
+		* Idle:		initiate a TCP session
+		* Connect:	TCP handshake is complete
+		* Active:	TCP handshake again
+		* OpenSent:	sent OPEN
+		* OpenConfirm:	Confirm OPEN
+		* Established
+	* best-path algorithm = weight, local preference, AS path, MED
+ 	* bgp default local-preference: AS出入口
 ### 3.3 Wireless
 * 3.3.c Describe access point discovery and join process (discovery algorithms, WLC selection process)
     * CAPWAP
@@ -287,7 +301,7 @@
         * controller(push config) -> devices(routers, switches)
 ---
 ## Mapping Table
-* 1.3: #87 #123 #140 #152 #229 #234 #297 #328 #335 #382 #393
+* 1.3: #87 #123 #140 #152 #229 #234 #297 #328 #335 #382 #393 401 473 523 527 560 565 566 589
 * 1.4.a: #1 #51 #82 #88 #92 #120 #130 #188 #206 #222 #228 #237 #241 #267 #278 #283 #321 #336 #344 #362 #388 #399 #407 #411 #425 #439 #445 #458 #534 #608 #648
 * 1.5.a: #596 #643
 * 2.2.b
